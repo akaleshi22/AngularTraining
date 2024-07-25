@@ -6,9 +6,13 @@ import { CustomImage } from './dashboard-item.model';
   standalone: true,
   imports: [],
   templateUrl: './dashboard-item.component.html',
-  styleUrl: './dashboard-item.component.css'
+  styleUrl: './dashboard-item.component.css',
+
+  // host: {
+  //   class: 'dashboard-item',
+  // },
 })
 export class DashboardItemComponent {
-  @Input({required: true}) image!: CustomImage;
-  @Input({required: true}) title!: string;
+  @Input({ required: true }) image!: CustomImage;
+  @Input({ required: true }) title!: string;
 }
