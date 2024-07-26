@@ -4,4 +4,20 @@
   <hr />
 
   <app-auth />
+
+  <!-- @if (isAdmin()) {
+    <p>Only admins can see this!</p>
+  } -->
+
+  <!-- <p *ngIf="isAdmin()">Only admins can see this!</p> -->
+
+  <p *appAuth="'admin'" class="protected-content admin">
+    Only admins can see this!
+  </p>
+  <p *appAuth="'user'" class="protected-content unauthenticated">
+    Result users can see this!
+  </p>
+  <p *appAuth="'guest'" class="protected-content authenticated">
+    Guest users can see this!
+  </p>
 </main>
