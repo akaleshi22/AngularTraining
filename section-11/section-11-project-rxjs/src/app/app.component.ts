@@ -54,6 +54,7 @@ export class AppComponent implements OnInit {
       next: (val) => console.log(val),
       complete: () => console.log('completed'),
     });
+
     const subscription = this.clickCount$.subscribe({
       next: () => console.log(`Clicked button ${this.clickCount()} times.`),
     });
